@@ -1,5 +1,7 @@
 import { Instagram, Facebook, Twitter } from "lucide-react";
 
+import React from "react";
+
 const Footer = () => {
   return (
     <div className="bg-clr-bgsec">

@@ -8,6 +8,7 @@ import {
   WattsUp,
 } from "../components";
 
+import React from "react";
 const Events = () => {
   return (
     <div className="bg-clr-black min-h-screen text-white font-Poppins">

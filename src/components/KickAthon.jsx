@@ -3,6 +3,8 @@ import KickAthon1 from "../assets/KickAthon1.jpg";
 import KickAthon2 from "../assets/KickAthon2.jpg";
 import KickAthon3 from "../assets/KickAthon3.jpg";
 
+import React from "react";
+
 const KickAthon = () => {
   return (
     <section className="max-w-[1440px] mx-auto lg:px-[2rem] md:px-[1rem] text-white font-Poppins gap-4 flex flex-col">

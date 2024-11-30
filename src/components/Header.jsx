@@ -1,5 +1,7 @@
 import { NavBar } from "../components";
 
+import React from "react";
+
 import VideoReady from "../assets/VideoReady.mp4";
 
 const Header = () => {

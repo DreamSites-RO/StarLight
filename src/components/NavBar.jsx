@@ -1,5 +1,7 @@
 import LogoStarLight from "../assets/LogoStarLight.png";
 
+import React from "react";
+
 import {
   BookMarked,
   Heart,

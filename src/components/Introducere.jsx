@@ -1,5 +1,6 @@
 import HomePage from "../assets/HomePage.jpg";
 
+import React from "react";
 const Introducere = () => {
   return (
     <section className="bg-clr-bgsec min-h-screen text-white font-Poppins max-w-[1440px] mx-auto py-16 flex flex-col justify-center items-center">

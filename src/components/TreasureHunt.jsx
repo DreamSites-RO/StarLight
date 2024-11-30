@@ -2,6 +2,8 @@ import TreasureHunt1 from "../assets/TreasureHunt1.jpg";
 import TreasureHunt2 from "../assets/TreasureHunt2.jpg";
 import TreasureHunt3 from "../assets/TreasureHunt3.jpg";
 
+import React from "react";
+
 const TreasureHunt = () => {
   return (
     <section className="max-w-[1440px] mx-auto lg:px-[2rem] md:px-[1rem] text-white font-Poppins gap-4 flex flex-col">

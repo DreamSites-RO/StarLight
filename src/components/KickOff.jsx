@@ -2,6 +2,8 @@ import KickOff1 from "../assets/KickOff1.jpg";
 import KickOff2 from "../assets/KickOff2.jpg";
 import KickOff3 from "../assets/KickOff3.jpg";
 
+import React from "react";
+
 const KickOff = () => {
   return (
     <section className="max-w-[1440px] mx-auto lg:px-[2rem] md:px-[1rem] text-white font-Poppins gap-4 flex flex-col">

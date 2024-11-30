@@ -5,6 +5,8 @@ import WattsUp3 from "../assets/WattsUp3.jpg";
 
 import { Link } from "react-router-dom";
 
+import React from "react";
+
 const Exty = () => {
   return (
     <section className="max-w-[1440px] mx-auto lg:px-[2rem] md:px-[1rem] text-white font-Poppins gap-4 flex flex-col">

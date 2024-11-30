@@ -1,5 +1,7 @@
 import { Route, Routes } from "react-router-dom";
 
+import React from "react";
+
 import StarLight from "./pages/StarLight";
 import Contact from "./pages/Contact";
 import Events from "./pages/Events";

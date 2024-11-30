@@ -3,6 +3,8 @@ import Exty2 from "../assets/Exty2.png";
 
 import WattsUp3 from "../assets/WattsUp3.jpg";
 
+import React from "react";
+
 import { Link } from "react-router-dom";
 
 const Exty = () => {

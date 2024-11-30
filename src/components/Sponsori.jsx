@@ -12,6 +12,8 @@ import Romvega from "../assets/Romvega.png";
 import LogoOdo from "../assets/LogoOdo.jpg";
 import LogoAsociatieOdo from "../assets/LogoAsociatieOdo.png";
 
+import React from "react";
+
 const cardsData = [
   {
     id: 1,

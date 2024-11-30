@@ -5,6 +5,8 @@ import { MailPlus, Map, Phone } from "lucide-react";
 
 import Swal from "sweetalert2";
 
+import React from "react";
+
 const ContactForm = () => {
   const onSubmit = async (event) => {
     event.preventDefault();
