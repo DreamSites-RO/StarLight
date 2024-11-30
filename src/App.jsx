@@ -10,6 +10,10 @@ function App() {
   return (
     <div className="bg-black">
       <Routes>
+        <Route
+          path="/"
+          element={"https://dreamsites-ro.github.io/StarLight/"}
+        />
         <Route path="/" element={<StarLight />} />
         <Route path="/Contact" element={<Contact />} />
         <Route path="/Events" element={<Events />} />
