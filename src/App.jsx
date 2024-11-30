@@ -8,6 +8,7 @@ import Events from "./pages/Events";
 import Rewards from "./pages/Rewards";
 import Robots from "./pages/Robots";
 import About from "./pages/About";
+import Members from "./pages/Members";
 
 function App() {
   return (
@@ -19,6 +20,7 @@ function App() {
         <Route path="/Rewards" element={<Rewards />} />
         <Route path="/Robots" element={<Robots />} />
         <Route path="/About" element={<About />} />
+        <Route path="/Members" element={<Members />} />
       </Routes>
     </div>
   );

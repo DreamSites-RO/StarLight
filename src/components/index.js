@@ -11,3 +11,6 @@ export { default as Bara } from "../components/Bara";
 export { default as WattsUp } from "../components/WattsUp";
 export { default as Exty } from "../components/Exty";
 export { default as Ceres } from "../components/Ceres";
+export { default as Mentori } from "../components/Mentori";
+export { default as Membri } from "../components/Membri";
+export { default as Voluntari } from "../components/Voluntari";

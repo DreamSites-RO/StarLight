@@ -9,7 +9,7 @@ const About = () => {
         <h1 className="text-[2.5rem] font-black mb-[2rem] opacity-90 hover:opacity-100 transtion duration-300">
           About StarLight
         </h1>
-        <div className="max-w-[850px] mx-auto lg:px-[2rem] md:px-[1rem] text-white text-center font-Poppins gap-4 flex flex-col">
+        <div className="max-w-[850px] mx-auto lg:px-[2rem] md:px-[1rem] px-[1rem] text-white text-center font-Poppins gap-4 flex flex-col">
           <p className="text-[1rem] font-black opacity-80">
             Starting on April 14, we received the rooms promised by the
             „Alexandru Odobescu” National College, but their condition was not
