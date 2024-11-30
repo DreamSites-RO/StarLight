@@ -21,9 +21,9 @@ const NavBar = () => {
         <div className="md:px-12 lg:py-2">
           <div className="flex items-center justify-between">
             <div className="relative z-20 ml-6 lg:ml-0">
-              <a href="/">
+              <Link to="/">
                 <img src={LogoStarLight} alt="Logo1" className="lg:w-48 w-40" />
-              </a>
+              </Link>
             </div>
 
             <div className="flex items-center justify-end mr-6 lg:ml-0">
@@ -31,54 +31,54 @@ const NavBar = () => {
                 <div className="flex flex-col h-full justify-between lg:items-center lg:flex-row">
                   <ul className="px-6 pt-32 text-white space-y-8 md:px-12 lg:space-y-0 lg:flex lg:space-x-12 lg:pt-0">
                     <li>
-                      <a
-                        href="/Members"
+                      <Link
+                        to="/Members"
                         className="group relative before:absolute before:inset-x-0 before:bottom-0 before:h-2 before:origin-right before:scale-x-0 flex flex-row"
                       >
                         <span class="relative text-white opacity-80 hover:opacity-100 transition duration-300">
                           Members
                         </span>
-                      </a>
+                      </Link>
                     </li>
                     <li>
-                      <a
-                        href="/Events"
+                      <Link
+                        to="/Events"
                         className="group relative before:absolute before:inset-x-0 before:bottom-0 before:h-2 before:origin-right before:scale-x-0 flex flex-row"
                       >
                         <span class="relative text-white opacity-80 hover:opacity-100 transition duration-300">
                           Events
                         </span>
-                      </a>
+                      </Link>
                     </li>
                     <li>
-                      <a
-                        href="/Premi"
+                      <Link
+                        to="/Premi"
                         className="group relative before:absolute before:inset-x-0 before:bottom-0 before:h-2 before:origin-right before:scale-x-0"
                       >
                         <span class="relative text-white opacity-80 hover:opacity-100 transition duration-300">
                           Rewards
                         </span>
-                      </a>
+                      </Link>
                     </li>
                     <li>
-                      <a
-                        href="/Robots"
+                      <Link
+                        to="/Robots"
                         className="group relative before:absolute before:inset-x-0 before:bottom-0 before:h-2 before:origin-right before:scale-x-0"
                       >
                         <span class="relative text-white opacity-80 hover:opacity-100 transition duration-300">
                           Robots
                         </span>
-                      </a>
+                      </Link>
                     </li>
                     <li>
-                      <a
-                        href="/About"
+                      <Link
+                        to="/About"
                         className="group relative before:absolute before:inset-x-0 before:bottom-0 before:h-2 before:origin-right before:scale-x-0"
                       >
                         <span class="relative text-white opacity-80 hover:opacity-100 transition duration-300">
                           About
                         </span>
-                      </a>
+                      </Link>
                     </li>
                   </ul>
                   <Link to="/Contact">
