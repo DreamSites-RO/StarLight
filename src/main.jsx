@@ -8,7 +8,10 @@ import React from "react";
 
 createRoot(document.getElementById("root")).render(
   <StrictMode>
-    <BrowserRouter basename="/StarLight" future={{ v7_startTransition: true }}>
+    <BrowserRouter
+      basename="/StarLight"
+      future={{ v7_startTransition: true, v7_relativeSplatPath: true }}
+    >
       <App />
     </BrowserRouter>
   </StrictMode>
