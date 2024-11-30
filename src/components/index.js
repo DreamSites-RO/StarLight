@@ -1,0 +1,13 @@
+export { default as NavBar } from "../components/NavBar";
+export { default as Header } from "../components/Header";
+export { default as Introducere } from "../components/Introducere";
+export { default as Sponsori } from "../components/Sponsori";
+export { default as Footer } from "../components/Footer";
+export { default as ContactForm } from "../components/ContactForm";
+export { default as KickOff } from "../components/KickOff";
+export { default as KickAthon } from "../components/KickAthon";
+export { default as TreasureHunt } from "../components/TreasureHunt";
+export { default as Bara } from "../components/Bara";
+export { default as WattsUp } from "../components/WattsUp";
+export { default as Exty } from "../components/Exty";
+export { default as Ceres } from "../components/Ceres";
