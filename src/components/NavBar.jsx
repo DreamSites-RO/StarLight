@@ -4,6 +4,7 @@ import React from "react";
 
 import {
   BookMarked,
+  Eye,
   Heart,
   MonitorDown,
   MonitorSmartphone,
@@ -52,11 +53,11 @@ const NavBar = () => {
                     </li>
                     <li>
                       <Link
-                        to="/Premi"
+                        to="/Awards"
                         className="group relative before:absolute before:inset-x-0 before:bottom-0 before:h-2 before:origin-right before:scale-x-0"
                       >
                         <span class="relative text-white opacity-80 hover:opacity-100 transition duration-300">
-                          Rewards
+                          Awards
                         </span>
                       </Link>
                     </li>
@@ -113,48 +114,59 @@ const NavBar = () => {
                 <div className="flex flex-col h-full justify-between lg:items-center lg:flex-row mt-16 md:mt-16 lg:mt-0">
                   <ul className="px-6 pt-32 text-white space-y-8 md:px-12 lg:space-y-0 lg:flex lg:space-x-12 lg:pt-0">
                     <li>
-                      <a
-                        href="/Members"
+                      <Link
+                        to="/Members"
                         className="group relative before:absolute before:inset-x-0 before:bottom-0 before:h-2 before:origin-right before:scale-x-0 flex flex-row"
                       >
                         <span class="relative text-white opacity-80 hover:opacity-100 transition duration-300 flex flex-row gap-2">
                           <Heart />
                           Members
                         </span>
-                      </a>
+                      </Link>
                     </li>
                     <li>
-                      <a
-                        href="/Awards"
+                      <Link
+                        to="/Events"
+                        className="group relative before:absolute before:inset-x-0 before:bottom-0 before:h-2 before:origin-right before:scale-x-0 flex flex-row"
+                      >
+                        <span class="relative text-white opacity-80 hover:opacity-100 transition duration-300 flex flex-row gap-2">
+                          <Eye />
+                          Events
+                        </span>
+                      </Link>
+                    </li>
+                    <li>
+                      <Link
+                        to="/Awards"
                         className="group relative before:absolute before:inset-x-0 before:bottom-0 before:h-2 before:origin-right before:scale-x-0"
                       >
                         <span class="relative text-white opacity-80 hover:opacity-100 transition duration-300 flex flex-row gap-2">
                           <MonitorDown />
                           Awards
                         </span>
-                      </a>
+                      </Link>
                     </li>
                     <li>
-                      <a
-                        href="/Robots"
+                      <Link
+                        to="/Robots"
                         className="group relative before:absolute before:inset-x-0 before:bottom-0 before:h-2 before:origin-right before:scale-x-0"
                       >
                         <span class="relative text-white opacity-80 hover:opacity-100 transition duration-300 flex flex-row gap-2">
                           <BookMarked />
                           Robots
                         </span>
-                      </a>
+                      </Link>
                     </li>
                     <li>
-                      <a
-                        href="/About"
+                      <Link
+                        to="/About"
                         className="group relative before:absolute before:inset-x-0 before:bottom-0 before:h-2 before:origin-right before:scale-x-0"
                       >
                         <span class="relative text-white opacity-80 hover:opacity-100 transition duration-300 flex flex-row gap-2">
                           <MonitorSmartphone />
                           About
                         </span>
-                      </a>
+                      </Link>
                     </li>
                     <div className="w-full h-[1px] bg-gray-500"></div>
                     <Link to="/Contact">
