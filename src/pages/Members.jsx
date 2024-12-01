@@ -11,7 +11,7 @@ import {
 
 const Members = () => {
   return (
-    <div>
+    <div className="bg-clr-black min-h-screen text-white font-Poppins">
       <NavBar />
       <Mentori />
       <Bara />
