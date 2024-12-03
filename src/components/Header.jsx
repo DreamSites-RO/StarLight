@@ -1,15 +1,17 @@
 import { NavBar } from "../components";
+
 import React from "react";
+
 import VideoReady from "../assets/VideoReady.mp4";
-import { motion } from "framer-motion"; // Import motion from Framer Motion
+
+import { motion } from "framer-motion";
 
 const Header = () => {
-  // Staggered animation variants
   const staggerContainer = {
     hidden: {},
     show: {
       transition: {
-        staggerChildren: 0.3, // Stagger time (delay between each item)
+        staggerChildren: 0.3,
       },
     },
   };
@@ -21,7 +23,7 @@ const Header = () => {
       type: "spring",
       stiffness: 100,
       damping: 25,
-      delay: 1, // 1 second delay before the animation starts
+      delay: 1,
     },
   };
 
@@ -40,25 +42,21 @@ const Header = () => {
       <div className="relative z-10 w-full">
         <NavBar />
         <div className="flex flex-col items-center justify-center h-full mt-20 text-center">
-          {/* Motion container with stagger */}
           <motion.div
             className="flex flex-col items-center justify-center"
             initial="hidden"
             animate="show"
-            variants={staggerContainer} // Applying the stagger effect to the container
+            variants={staggerContainer}
           >
-            {/* Animated H1 */}
             <motion.h1
               className="lg:text-[5.5rem] md:text-[4.3rem] text-[3.7rem] font-black mt-8 text-white"
               variants={fadeUp} // Applying fade-up animation to h1
             >
               Welcome to StarLight!
             </motion.h1>
-
-            {/* Animated Paragraph */}
             <motion.p
               className="lg:text-[2.8rem] md:text-[2.3rem] text-[1.8rem] font-black mt-4 italic text-clr-princ font-Genty"
-              variants={fadeUp} // Applying fade-up animation to p
+              variants={fadeUp}
             >
               "The future lies beyond the stars..."
             </motion.p>

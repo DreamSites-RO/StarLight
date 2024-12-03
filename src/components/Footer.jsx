@@ -1,32 +1,69 @@
 import { Instagram, Facebook, Twitter } from "lucide-react";
-
 import React from "react";
+import { motion } from "framer-motion";
 
 const Footer = () => {
+  const container = {
+    hidden: { opacity: 0 },
+    visible: {
+      opacity: 1,
+      transition: {
+        staggerChildren: 0.3, // Stagger children elements with a 0.3s delay
+      },
+    },
+  };
+
+  const item = {
+    hidden: { opacity: 0, y: 20 }, // Element starts from below and hidden
+    visible: {
+      opacity: 1,
+      y: 0,
+      transition: { duration: 0.6 }, // Animate with upward movement and fade-in
+    },
+  };
+
   return (
-    <div className="bg-clr-bgsec">
+    <motion.div
+      className="bg-clr-bgsec"
+      initial="hidden"
+      whileInView="visible"
+      viewport={{ once: false, amount: 0.2 }} // Trigger the animation when the section is 20% in view
+      variants={container}
+    >
       <div className="max-w-[1440px] justify-center mx-auto py-12 flex flex-col md:flex-row lg:flex-row font-Poppins text-white font-black px-4">
-        <div className="flex flex-1 flex-col justify-start mb-6 md:mb-0 lg:mb-0 opacity-80">
-          <h1>@2024 StarLight</h1>
-          <h1>
+        {/* Left section (text) */}
+        <motion.div
+          variants={container}
+          className="flex flex-1 flex-col justify-start mb-6 md:mb-0 lg:mb-0 opacity-80"
+        >
+          <motion.h1 variants={item}>@2024 StarLight</motion.h1>
+          <motion.h1 variants={item}>
             <a href="https://cnodobescu.ro/">
               "Alexandru Odobescu National College" Pitești
             </a>
-          </h1>
-        </div>
-        <div className="flex flex-1 flex-row lg:justify-end md:justify-end justify-start text-clr-princ gap-4">
-          <a href="https://www.instagram.com/starlight_robotics/">
+          </motion.h1>
+        </motion.div>
+
+        {/* Right section (social icons) */}
+        <motion.div className="flex flex-1 flex-row lg:justify-end md:justify-end justify-start text-clr-princ gap-4">
+          <motion.a
+            variants={item}
+            href="https://www.instagram.com/starlight_robotics/"
+          >
             <Instagram size={32} />
-          </a>
-          <a href="https://www.facebook.com/profile.php?id=61558967226227">
+          </motion.a>
+          <motion.a
+            variants={item}
+            href="https://www.facebook.com/profile.php?id=61558967226227"
+          >
             <Facebook size={32} />
-          </a>
-          <a href="https://twitter.com/StarLight_24909">
+          </motion.a>
+          <motion.a variants={item} href="https://twitter.com/StarLight_24909">
             <Twitter size={32} />
-          </a>
-        </div>
+          </motion.a>
+        </motion.div>
       </div>
-    </div>
+    </motion.div>
   );
 };
 
