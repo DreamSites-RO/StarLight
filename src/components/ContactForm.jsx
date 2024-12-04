@@ -1,8 +1,6 @@
 import React from "react";
-import { Link } from "react-router-dom";
-
+import { motion } from "framer-motion"; // Import motion from framer-motion
 import { MailPlus, Map, Phone } from "lucide-react";
-
 import Swal from "sweetalert2";
 
 const ContactForm = () => {
@@ -35,56 +33,30 @@ const ContactForm = () => {
 
   return (
     <section className="max-w-[1440px] mx-auto lg:px-[2rem] md:px-[1rem] text-white font-Poppins flex flex-col lg:flex-row my-[2rem] min-h-screen">
-      <div className="flex flex-1 justify-center flex-col items-center gap-8">
-        <h1 className="font-Poppins font-black text-[2rem] opacity-90 hover:opacity-100 transition-all duration-300">
-          Wanna contact us?
-        </h1>
-        <p className="opacity-80 font-Poppins font-black text-[1.1rem] text-center hover:opacity-100 transition-all duration-300">
-          We’d love to hear from you! Please write us a message by completing
-          the form below. Our team will do their best to respond as quickly as
-          possible. Your feedback, questions, or concerns are very important to
-          us!
-        </p>
-        <div className="flex flex-col justify-center gap-2 text-white font-Poppins font-black text-center">
-          <Link
-            to="tel:+40 771 684 038"
-            className="flex justify-center gap-2  hover:text-clr-princ transition-all duration-300 text-opacity-80 hover:opacity-100"
-          >
-            <Phone />
-            Telefon1: +40 771 684 038
-          </Link>
-          <Link
-            to="tel:+40 742 025 449"
-            className="flex justify-center gap-2 text-opacity-80 hover:opacity-100 hover:text-clr-princ transition-all duration-300"
-          >
-            <Phone />
-            Telefon2: +40 742 025 449
-          </Link>
-          <Link
-            to="https://www.google.com/maps/place/Strada+Vasile+Pârvan+1,+Pitești"
-            className="flex justify-center gap-2 text-opacity-80 hover:opacity-100 hover:text-clr-princ transition-all duration-300"
-          >
-            <Map /> Strada Vasile Pârvan 1, Pitești
-          </Link>
-          <Link
-            to="mailto:starlight24909@gmail.com"
-            className="flex justify-center gap-2 text-opacity-80 hover:opacity-100 hover:text-clr-princ transition-all duration-300"
-          >
-            <MailPlus />
-            starlight24909@gmail.com
-          </Link>
-        </div>
-      </div>
-
       <div className="flex flex-1 justify-center items-center">
-        <form
+        <motion.form
           onSubmit={onSubmit}
           className="flex flex-col justify-center items-center gap-8"
+          initial={{ opacity: 0, y: 50 }} // Initial opacity and position
+          animate={{ opacity: 1, y: 0 }} // Final opacity and position
+          transition={{ duration: 0.8, staggerChildren: 0.3 }} // Stagger the children with a delay of 0.3s
         >
-          <h1 className="font-Poppins font-black text-[2rem] opacity-90">
-            Write us an message!
-          </h1>
-          <div className="flex flex-col justify-start gap-2">
+          <motion.h1
+            className="font-Poppins font-black text-[2rem] opacity-90"
+            initial={{ opacity: 0, y: 50 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8 }}
+          >
+            Write us a message!
+          </motion.h1>
+
+          {/* Form Fields */}
+          <motion.div
+            className="flex flex-col justify-start gap-2"
+            initial={{ opacity: 0, y: 50 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8 }}
+          >
             <label className="font-Poppins text-[1.10rem] opacity-80 font-black">
               First Name
             </label>
@@ -95,9 +67,14 @@ const ContactForm = () => {
               name="First Name"
               required
             />
-          </div>
+          </motion.div>
 
-          <div className="flex flex-col justify-start gap-2">
+          <motion.div
+            className="flex flex-col justify-start gap-2"
+            initial={{ opacity: 0, y: 50 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8 }}
+          >
             <label className="font-Poppins text-[1.10rem] opacity-80 font-black">
               Last Name
             </label>
@@ -108,9 +85,14 @@ const ContactForm = () => {
               name="Last Name"
               required
             />
-          </div>
+          </motion.div>
 
-          <div className="flex flex-col justify-start gap-2">
+          <motion.div
+            className="flex flex-col justify-start gap-2"
+            initial={{ opacity: 0, y: 50 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8 }}
+          >
             <label className="font-Poppins text-[1.10rem] opacity-80 font-black">
               Email
             </label>
@@ -121,9 +103,14 @@ const ContactForm = () => {
               required
               name="Email"
             />
-          </div>
+          </motion.div>
 
-          <div className="flex flex-col justify-start gap-2">
+          <motion.div
+            className="flex flex-col justify-start gap-2"
+            initial={{ opacity: 0, y: 50 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8 }}
+          >
             <label className="font-Poppins text-[1.10rem] opacity-80 font-black">
               Phone
             </label>
@@ -134,9 +121,14 @@ const ContactForm = () => {
               name="Phone Number"
               required
             />
-          </div>
+          </motion.div>
 
-          <div className="flex flex-col justify-start gap-2">
+          <motion.div
+            className="flex flex-col justify-start gap-2"
+            initial={{ opacity: 0, y: 50 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8 }}
+          >
             <label className="font-Poppins text-[1.10rem] opacity-80 font-black">
               Your Message
             </label>
@@ -146,15 +138,18 @@ const ContactForm = () => {
               placeholder="Enter your message"
               required
             ></textarea>
-          </div>
+          </motion.div>
 
-          <button
+          <motion.button
             type="submit"
             className="bg-clr-princ px-8 py-4 rounded-[0.5rem] font-Poppins font-black text-[1.15rem] active:bg-clr-sec hover:bg-clr-sec transition-all min-w-[450px] duration-500"
+            initial={{ opacity: 0, y: 50 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8 }}
           >
             Send Message
-          </button>
-        </form>
+          </motion.button>
+        </motion.form>
       </div>
     </section>
   );
