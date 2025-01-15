@@ -1,6 +1,7 @@
 import React from "react";
-import { motion } from "framer-motion"; // Import motion from framer-motion
-import { MailPlus, Map, Phone } from "lucide-react";
+
+import { motion } from "framer-motion";
+
 import Swal from "sweetalert2";
 
 const ContactForm = () => {
@@ -61,7 +62,7 @@ const ContactForm = () => {
               First Name
             </label>
             <input
-              className="border-clr-princ border-2 rounded-[0.5rem] bg-clr-bgsec py-3 px-4 transition-all duration-300 shadow-xl min-w-[450px]"
+              className="border-clr-princ border-2 rounded-[0.5rem] bg-clr-bgsec py-3 px-4 transition-all duration-300 shadow-xl min-w-[350px]"
               type="text"
               placeholder="Enter your first name"
               name="First Name"
@@ -79,7 +80,7 @@ const ContactForm = () => {
               Last Name
             </label>
             <input
-              className="border-clr-princ border-2 rounded-[0.5rem] bg-clr-bgsec py-3 px-4 transition-all duration-300 shadow-xl min-w-[450px]"
+              className="border-clr-princ border-2 rounded-[0.5rem] bg-clr-bgsec py-3 px-4 transition-all duration-300 shadow-xl min-w-[350px]"
               type="text"
               placeholder="Enter your last name"
               name="Last Name"
@@ -97,7 +98,7 @@ const ContactForm = () => {
               Email
             </label>
             <input
-              className="border-clr-princ border-2 rounded-[0.5rem] bg-clr-bgsec py-3 px-4 transition-all duration-300 shadow-xl min-w-[450px]"
+              className="border-clr-princ border-2 rounded-[0.5rem] bg-clr-bgsec py-3 px-4 transition-all duration-300 shadow-xl min-w-[350px]"
               type="email"
               placeholder="Enter your email"
               required
@@ -115,7 +116,7 @@ const ContactForm = () => {
               Phone
             </label>
             <input
-              className="border-clr-princ border-2 rounded-[0.5rem] bg-clr-bgsec py-3 px-4 transition-all duration-300 shadow-xl overflow-y-hidden min-w-[450px]"
+              className="border-clr-princ border-2 rounded-[0.5rem] bg-clr-bgsec py-3 px-4 transition-all duration-300 shadow-xl overflow-y-hidden min-w-[350px]"
               type="text"
               placeholder="Enter your phone number"
               name="Phone Number"
@@ -133,7 +134,7 @@ const ContactForm = () => {
               Your Message
             </label>
             <textarea
-              className="border-clr-princ border-2 rounded-[0.5rem] bg-clr-bgsec py-3 px-4 transition-all duration-300 shadow-xl min-w-[450px] min-h-[150px]"
+              className="border-clr-princ border-2 rounded-[0.5rem] bg-clr-bgsec py-3 px-4 transition-all duration-300 shadow-xl min-w-[350px] min-h-[150px]"
               name="Message"
               placeholder="Enter your message"
               required
@@ -142,7 +143,7 @@ const ContactForm = () => {
 
           <motion.button
             type="submit"
-            className="bg-clr-princ px-8 py-4 rounded-[0.5rem] font-Poppins font-black text-[1.15rem] active:bg-clr-sec hover:bg-clr-sec transition-all min-w-[450px] duration-500"
+            className="bg-clr-princ px-8 py-4 rounded-[0.5rem] font-Poppins font-black text-[1.15rem] active:bg-clr-sec hover:bg-clr-sec transition-all min-w-[350px] duration-500"
             initial={{ opacity: 0, y: 50 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}

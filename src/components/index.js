@@ -14,3 +14,6 @@ export { default as Ceres } from "../components/Ceres";
 export { default as Mentori } from "../components/Mentori";
 export { default as Membri } from "../components/Membri";
 export { default as Voluntari } from "../components/Voluntari";
+export { default as HTech } from "../components/HTech";
+export { default as ZileleRoboticii } from "../components/ZileleRoboticii";
+export { default as MareaUnireRoboticii } from "../components/MareaUnireRoboticii";

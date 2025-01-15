@@ -6,6 +6,9 @@ import {
   TreasureHunt,
   Bara,
   WattsUp,
+  HTech,
+  ZileleRoboticii,
+  MareaUnireRoboticii,
 } from "../components";
 
 import React from "react";
@@ -20,7 +23,13 @@ const Events = () => {
         <Bara />
         <KickAthon />
         <Bara />
+        <HTech />
+        <Bara />
         <WattsUp />
+        <Bara />
+        <ZileleRoboticii />
+        <Bara />
+        <MareaUnireRoboticii />
         <Bara />
       </div>
       <Footer />

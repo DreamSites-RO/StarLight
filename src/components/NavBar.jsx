@@ -59,7 +59,7 @@ const NavBar = () => {
                         </span>
                       </Link>
                     </li>
-                    <li>
+                    {/* <li>
                       <Link
                         to="/Awards"
                         className="group relative before:absolute before:inset-x-0 before:bottom-0 before:h-2 before:origin-right before:scale-x-0"
@@ -68,7 +68,7 @@ const NavBar = () => {
                           Awards
                         </span>
                       </Link>
-                    </li>
+                    </li> */}
                     <li>
                       <Link
                         to="/Robots"
@@ -79,7 +79,7 @@ const NavBar = () => {
                         </span>
                       </Link>
                     </li>
-                    <li>
+                    {/* <li>
                       <Link
                         to="/About"
                         className="group relative before:absolute before:inset-x-0 before:bottom-0 before:h-2 before:origin-right before:scale-x-0"
@@ -88,7 +88,7 @@ const NavBar = () => {
                           About
                         </span>
                       </Link>
-                    </li>
+                    </li> */}
                   </motion.ul>
 
                   <motion.div {...fadeUp}>
@@ -150,7 +150,7 @@ const NavBar = () => {
                         </span>
                       </Link>
                     </li>
-                    <li>
+                    {/* <li>
                       <Link
                         to="/Awards"
                         className="group relative before:absolute before:inset-x-0 before:bottom-0 before:h-2 before:origin-right before:scale-x-0"
@@ -160,7 +160,7 @@ const NavBar = () => {
                           Awards
                         </span>
                       </Link>
-                    </li>
+                    </li> */}
                     <li>
                       <Link
                         to="/Robots"
@@ -172,7 +172,7 @@ const NavBar = () => {
                         </span>
                       </Link>
                     </li>
-                    <li>
+                    {/* <li>
                       <Link
                         to="/About"
                         className="group relative before:absolute before:inset-x-0 before:bottom-0 before:h-2 before:origin-right before:scale-x-0"
@@ -182,7 +182,7 @@ const NavBar = () => {
                           About
                         </span>
                       </Link>
-                    </li>
+                    </li> */}
                     <div className="w-full h-[1px] bg-gray-500"></div>
                     <motion.div {...fadeUp}>
                       <Link to="/Contact">
