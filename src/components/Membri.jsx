@@ -1,5 +1,7 @@
 import React, { useState } from "react";
 
+import { motion } from "framer-motion";
+
 import Adriana from "../assets/echipa/Adriana.jpg";
 import Angelo from "../assets/echipa/Angelo.png";
 import Antonia from "../assets/echipa/Antonia.jpg";
@@ -208,10 +210,23 @@ const FlipCard = ({ image, name, role, text, insta, gram }) => {
   const [isFlipped, setIsFlipped] = useState(false);
   const handleFlip = () => setIsFlipped(!isFlipped);
 
+  const cardVariants = {
+    hidden: { opacity: 0, y: 100 }, // Start slightly below and hidden
+    visible: {
+      opacity: 1,
+      y: 0, // Move to its final position
+      transition: { duration: 0.5 }, // Animation duration
+    },
+  };
+
   return (
-    <div
+    <motion.div
       className="border-2 border-clr-princ rounded-[1.25rem] p-[4px] flex justify-center items-center w-[300px] h-[350px] md:w-[325px] md:h-[375px] lg:w-[350px] lg:h-[400px] perspective cursor-pointer mx-auto"
       onClick={handleFlip}
+      variants={cardVariants}
+      initial="hidden"
+      whileInView="visible"
+      viewport={{ once: true, amount: 0.3 }} // Trigger animation when 30% of the card is in view
     >
       <div className="relative w-full h-full transition-transform duration-500 rounded-[1.25rem] overflow-hidden">
         {/* Background Image */}
@@ -241,7 +256,7 @@ const FlipCard = ({ image, name, role, text, insta, gram }) => {
         {/* Flip Back Overlay with Text */}
         {isFlipped && (
           <div className="absolute w-full h-full top-0 left-0 flex flex-col items-center justify-center text-white transition-opacity duration-500">
-            <p className="text-xl font-semibold mb-4 px-4 text-center">
+            <p className="lg:text-xl text-md font-semibold mb-4 px-4 text-center">
               {text}
             </p>
             {insta && (
@@ -249,7 +264,7 @@ const FlipCard = ({ image, name, role, text, insta, gram }) => {
                 href={insta}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="mt-4 bg-clr-princ text-white px-4 py-2 rounded-lg text-lg font-Poppins font-bold hover:bg-opacity-90 transition-all duration-300 border-black border-[2px]"
+                className="lg:mt-4 mt-2 bg-clr-princ text-white px-4 py-2 rounded-lg text-lg font-Poppins font-bold hover:bg-opacity-90 transition-all duration-300 border-black border-[2px]"
               >
                 {gram}
               </a>
@@ -257,17 +272,37 @@ const FlipCard = ({ image, name, role, text, insta, gram }) => {
           </div>
         )}
       </div>
-    </div>
+    </motion.div>
   );
 };
 
 const Membri = () => {
+  const sharedVariants = {
+    hidden: { opacity: 0, y: 50 }, // Start slightly below and hidden
+    visible: {
+      opacity: 1,
+      y: 0, // Move to its final position
+      transition: { duration: 0.5 }, // Animation duration
+    },
+  };
+
   return (
     <section className="max-w-[1440px] mx-auto mb-[2rem] lg:mb-[4rem] lg:px-[2rem] md:px-[1rem] text-center text-white font-Poppins gap-4 flex flex-col">
-      <h1 className="text-[2.5rem] font-black mb-[2rem] opacity-90 hover:opacity-100 transtion duration-300">
+      <motion.h1
+        className="text-[2.5rem] font-black mb-[2rem] opacity-90 hover:opacity-100 transition duration-300"
+        variants={sharedVariants}
+        initial="hidden"
+        whileInView="visible"
+        viewport={{ once: true, amount: 0.3 }} // Trigger animation when 30% of the <h1> is in view
+      >
         Membri
-      </h1>
-      <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-x-20 gap-y-12 mt-8">
+      </motion.h1>
+      <motion.div
+        className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-x-20 gap-y-12 mt-8"
+        initial="hidden"
+        animate="visible"
+        transition={{ staggerChildren: 0.2 }} // Apply stagger effect for child animations
+      >
         {MembriCards.map((card) => (
           <FlipCard
             key={card.id}
@@ -279,7 +314,7 @@ const Membri = () => {
             gram={card.gram}
           />
         ))}
-      </div>
+      </motion.div>
     </section>
   );
 };

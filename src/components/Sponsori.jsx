@@ -1,5 +1,6 @@
 import React, { useState } from "react";
-import { FaGlobe } from "react-icons/fa"; // Import a globe icon for the website link
+
+import { motion } from "framer-motion";
 
 import BricoWoodTrade from "../assets/BricoWoodTrade.png";
 import CasaCarpatica from "../assets/CasaCarpatica.png";
@@ -35,31 +36,31 @@ const cardsData = [
     id: 4,
     image: Olma,
     text: "Industria constructiilor metalice si a produselor din metal, exclusiv masini, utilaje si instalatii.",
-    link: "https://bricowoodtrade.ro/",
+    link: "",
   },
   {
     id: 5,
     image: Stracar,
     text: "Compania noastra este infiintata din dorinta de a aduce pe piata o serie de servicii complexe, de o calitate ireprosabila oferite de specialistii nostrii cu o bogata experienta in domeniu.",
-    link: "",
+    link: "https://www.stracar.ro/",
   },
   {
     id: 6,
     image: Trieurodata,
-    text: "Suntem un jucator important si recunoscut in piata solutiilor de automatizari si robotizari ale proceselor industriale, cu o cifra de afaceri la nivel de grup de peste 20 milioane de euro.",
+    text: "Indiferent in ce industrie va aflati, fiti cu un pas inaintea concurentei!",
     link: "https://trieurodata.ro/",
   },
   {
     id: 7,
     image: ApaDinNoy,
-    text: "Aceasta firma are peste 29 de ani de experiență în instrumentație de proces din toate industriile locale și naționale, cu o reputație de a livra instrumente și echipamente de măsură precise, în termen și cu respectarea bugetului.",
+    text: "Să împărţim o apă bună, care poate vorbi pe înţelesul tuturor, înseamnă câte puţin din toate.",
     link: "https://apadinnoy.ro/",
   },
   {
     id: 8,
     image: Romvega,
-    text: "Să împărţim o apă bună, care poate vorbi pe înţelesul tuturor, înseamnă câte puţin din toate. Şi curaj, şi onestitate, şi încredere în viitor. Iar toţi cei care o primesc trebuie să înţeleagă ceva pe cât de simplu, pe atât de miraculos.",
-    link: "https://bricowoodtrade.ro/",
+    text: "Aceasta firma are peste 29 de ani de experiență în instrumentație de proces din toate industriile locale și naționale.",
+    link: "https://www.romvega.ro/",
   },
 ];
 
@@ -82,13 +83,26 @@ const FlipCard = ({ image, text, link }) => {
   const [isFlipped, setIsFlipped] = useState(false);
   const handleFlip = () => setIsFlipped(!isFlipped);
 
+  const cardVariants = {
+    hidden: { opacity: 0, y: 100 }, // Start slightly below and hidden
+    visible: {
+      opacity: 1,
+      y: 0, // Move to its final position
+      transition: { duration: 0.5 }, // Animation duration
+    },
+  };
+
   return (
-    <div
-      className="border-2 border-clr-princ rounded-[1.25rem] p-[4px] flex justify-center items-center w-[225px] h-[225px] md:w-[250px] md:h-[250px] lg:w-[300px] lg:h-[300px] perspective cursor-pointer mx-auto"
+    <motion.div
+      className="border-2 border-clr-princ rounded-[1.25rem] p-[4px] flex justify-center items-center w-[300px] h-[300px] md:w-[325px] md:h-[325px] lg:w-[350px] lg:h-[350px] perspective cursor-pointer mx-auto"
       onClick={handleFlip}
+      variants={cardVariants}
+      initial="hidden"
+      whileInView="visible"
+      viewport={{ once: true, amount: 0.3 }} // Trigger animation when 30% of the card is in view
     >
       <div className="relative w-full h-full transition-transform duration-500 rounded-[1.25rem] overflow-hidden">
-        {/* Background Image and Optional Overlay */}
+        {/* Background Image */}
         <div
           className={`w-full h-full rounded-[1.25rem] bg-cover bg-center transition-all duration-500 ${
             isFlipped ? "bg-black bg-opacity-60" : ""
@@ -105,27 +119,36 @@ const FlipCard = ({ image, text, link }) => {
         {/* Flip Back Overlay with Text */}
         {isFlipped && (
           <div className="absolute w-full h-full top-0 left-0 flex flex-col items-center justify-center text-white transition-opacity duration-500">
-            <p className="text-xl font-semibold mb-4">{text}</p>
-            {/* Link Icon */}
+            <p className="lg:text-xl text-md font-semibold mb-4 px-4 text-center">
+              {text}
+            </p>
             {link && (
               <a
                 href={link}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="absolute bottom-4 bg-white text-black rounded-full p-2 hover:bg-gray-300 transition duration-300"
-                aria-label="Visit website"
+                className="lg:mt-4 mt-2 bg-clr-princ text-white px-4 py-2 rounded-lg text-lg font-Poppins font-bold hover:bg-opacity-90 transition-all duration-300 border-black border-[2px]"
               >
-                <FaGlobe size={20} />
+                Vizitati Siteul!
               </a>
             )}
           </div>
         )}
       </div>
-    </div>
+    </motion.div>
   );
 };
 
 const Sponsori = () => {
+  const sharedVariants = {
+    hidden: { opacity: 0, y: 50 }, // Start slightly below and hidden
+    visible: {
+      opacity: 1,
+      y: 0, // Move to its final position
+      transition: { duration: 0.5 }, // Animation duration
+    },
+  };
+
   return (
     <section className="bg-black min-h-screen">
       <div className="bg-black min-h-screen text-white font-Poppins lg:px-[2rem] md:px-[1rem] max-w-[1440px] mx-auto py-16 flex flex-col justify-center items-center">

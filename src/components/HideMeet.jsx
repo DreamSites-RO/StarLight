@@ -6,7 +6,7 @@ import React from "react";
 
 import { motion } from "framer-motion";
 
-const HTech = () => {
+const HideMeet = () => {
   const container = {
     hidden: { opacity: 0 },
     visible: {
@@ -121,4 +121,4 @@ const HTech = () => {
   );
 };
 
-export default HTech;
+export default HideMeet;
