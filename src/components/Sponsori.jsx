@@ -152,13 +152,25 @@ const Sponsori = () => {
   return (
     <section className="bg-black min-h-screen">
       <div className="bg-black min-h-screen text-white font-Poppins lg:px-[2rem] md:px-[1rem] max-w-[1440px] mx-auto py-16 flex flex-col justify-center items-center">
-        <h1 className="text-[2rem] font-black text-left opacity-90 hover:opacity-100 transition duration-300 ease-in-out mb-4 lg:mb-8">
+        <motion.h1
+          className="text-[2rem] font-black text-left opacity-90 hover:opacity-100 transition duration-300 ease-in-out mb-4 lg:mb-8"
+          variants={sharedVariants}
+          initial="hidden"
+          whileInView="visible"
+          viewport={{ once: true, amount: 0.3 }} // Trigger animation when 30% of the element is in view
+        >
           Our Sponsors
-        </h1>
-        <p className="text-[16px] text-center lg:text-[18px] font-bold opacity-80 font-Poppins px-2 md:px-[8rem] lg:px-[16rem]">
+        </motion.h1>
+        <motion.p
+          className="text-[16px] text-center lg:text-[18px] font-bold opacity-80 font-Poppins px-2 md:px-[8rem] lg:px-[16rem]"
+          variants={sharedVariants}
+          initial="hidden"
+          whileInView="visible"
+          viewport={{ once: true, amount: 0.3 }} // Trigger animation when 30% of the element is in view
+        >
           Robotics team sponsors are our essential support, providing vital
           funds and materials, making our dreams a reality.
-        </p>
+        </motion.p>
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-x-20 gap-y-12 mt-16">
           {cardsData.map((card) => (
             <FlipCard
@@ -172,13 +184,25 @@ const Sponsori = () => {
       </div>
 
       <div className="bg-black min-h-screen text-white font-Poppins lg:px-[2rem] md:px-[1rem] max-w-[1440px] mx-auto py-16 flex flex-col justify-center items-center">
-        <h1 className="text-[2rem] font-black text-left opacity-90 hover:opacity-100 transition duration-300 ease-in-out mb-4 lg:mb-8">
+        <motion.h1
+          className="text-[2rem] font-black text-left opacity-90 hover:opacity-100 transition duration-300 ease-in-out mb-4 lg:mb-8"
+          variants={sharedVariants}
+          initial="hidden"
+          whileInView="visible"
+          viewport={{ once: true, amount: 0.3 }} // Trigger animation when 30% of the element is in view
+        >
           Our Parteners
-        </h1>
-        <p className="text-[16px] text-center lg:text-[18px] font-bold opacity-80 font-Poppins px-2 md:px-[8rem] lg:px-[16rem]">
+        </motion.h1>
+        <motion.p
+          className="text-[16px] text-center lg:text-[18px] font-bold opacity-80 font-Poppins px-2 md:px-[8rem] lg:px-[16rem]"
+          variants={sharedVariants}
+          initial="hidden"
+          whileInView="visible"
+          viewport={{ once: true, amount: 0.3 }} // Trigger animation when 30% of the element is in view
+        >
           Our partners are the backbone of innovation, offering invaluable
           expertise, resources, and collaboration that drive our success.
-        </p>
+        </motion.p>
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-2 gap-x-20 gap-y-12 mt-16">
           {cardsDataParteneri.map((card) => (
             <FlipCard
