@@ -49,16 +49,25 @@ const Footer = () => {
           <motion.a
             variants={item}
             href="https://www.instagram.com/starlight_robotics/"
+            target="_blank"
+            rel="noopener noreferrer"
           >
             <Instagram size={32} />
           </motion.a>
           <motion.a
             variants={item}
             href="https://www.facebook.com/profile.php?id=61558967226227"
+            target="_blank"
+            rel="noopener noreferrer"
           >
             <Facebook size={32} />
           </motion.a>
-          <motion.a variants={item} href="https://twitter.com/StarLight_24909">
+          <motion.a
+            variants={item}
+            href="https://twitter.com/StarLight_24909"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
             <Twitter size={32} />
           </motion.a>
         </motion.div>

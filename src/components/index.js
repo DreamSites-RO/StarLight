@@ -17,3 +17,4 @@ export { default as Voluntari } from "../components/Voluntari";
 export { default as HTech } from "../components/HTech";
 export { default as ZileleRoboticii } from "../components/ZileleRoboticii";
 export { default as MareaUnireRoboticii } from "../components/MareaUnireRoboticii";
+export { default as HideMeet } from "../components/HideMeet";

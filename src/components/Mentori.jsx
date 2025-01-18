@@ -8,31 +8,43 @@ const MentoriCards = [
   {
     id: 1,
     image: Adi,
-    text: "Brico Wood Trade ofera servicii profesionale de debitare, frezare, cantuire, CNC pentru producatiorii de mobila!",
+    name: "Diaconu Adrian",
+    role: "-> Mentor",
+    text: "Ca mentor, încerc să ofer o viziune de ansamblu asupra lucrurilor printr-o îndrumare tehnică riguroasă, folosind principii de bază ale fizicii și matematicii.",
+    insta: "",
+    gram: "",
   },
   {
     id: 2,
     image: Veve,
-    text: "Casa Carpatica este localizată la baza Munţilor Făgăraş în centrul comunei Nucşoara, în imediată apropiere de Lacului Învârtita.",
+    name: "Diaconu Veronica",
+    role: "-> Mentor",
+    text: "Sunt unul dinte mentorii echipei StarLight Robotics, preocupat de învățare continuă, de cultivarea abilităților de a relaționa și de a oferi încredere tinerilor să își atingă performanțele.",
+    insta: "https://www.instagram.com/diaconu_veronica13/",
+    gram: "@diaconu_veronica13",
   },
   {
     id: 3,
     image: Voro,
-    text: "Casa Carpatica este localizată la baza Munţilor Făgăraş în centrul comunei Nucşoara, în imediată apropiere de Lacului Învârtita.",
+    name: "Daniel Vorovenci",
+    role: "-> Mentor & Vizitator",
+    text: "Salutare! Mă numesc Daniel Vorovenci, reprezint Colegiul Național ”Alexandru Odobescu” din Pitești în calitate de director și am devenit mentor oficial al acestei echipei în 2024.",
+    insta: "",
+    gram: "",
   },
 ];
 
-const FlipCard = ({ image, text, link }) => {
+const FlipCard = ({ image, name, role, text, insta, gram }) => {
   const [isFlipped, setIsFlipped] = useState(false);
   const handleFlip = () => setIsFlipped(!isFlipped);
 
   return (
     <div
-      className="border-2 border-clr-princ rounded-[1.25rem] p-[4px] flex justify-center items-center w-[275px] h-[300px] md:w-[300px] md:h-[325px] lg:w-[325px] lg:h-[350px] perspective cursor-pointer mx-auto"
+      className="border-2 border-clr-princ rounded-[1.25rem] p-[4px] flex justify-center items-center w-[300px] h-[350px] md:w-[325px] md:h-[375px] lg:w-[350px] lg:h-[400px] perspective cursor-pointer mx-auto"
       onClick={handleFlip}
     >
       <div className="relative w-full h-full transition-transform duration-500 rounded-[1.25rem] overflow-hidden">
-        {/* Background Image and Optional Overlay */}
+        {/* Background Image */}
         <div
           className={`w-full h-full rounded-[1.25rem] bg-cover bg-center transition-all duration-500 ${
             isFlipped ? "bg-black bg-opacity-60" : ""
@@ -46,20 +58,30 @@ const FlipCard = ({ image, text, link }) => {
           }}
         ></div>
 
+        {/* Black Transparent Overlay with Name and Role */}
+        {!isFlipped && (
+          <div className="absolute bottom-6 left-0 w-full bg-black bg-opacity-70 text-white px-6 py-4">
+            <h2 className="text-lg font-bold font-Poppins">{name}</h2>
+            <p className="text-[18px] font-semi-bold font-Poppins opacity-90">
+              {role}
+            </p>
+          </div>
+        )}
+
         {/* Flip Back Overlay with Text */}
         {isFlipped && (
           <div className="absolute w-full h-full top-0 left-0 flex flex-col items-center justify-center text-white transition-opacity duration-500">
-            <p className="text-xl font-semibold mb-4">{text}</p>
-            {/* Link Icon */}
-            {link && (
+            <p className="text-xl font-semibold mb-4 px-4 text-center">
+              {text}
+            </p>
+            {insta && (
               <a
-                href={link}
+                href={insta}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="absolute bottom-4 bg-white text-black rounded-full p-2 hover:bg-gray-300 transition duration-300"
-                aria-label="Visit website"
+                className="mt-4 bg-clr-princ text-white px-4 py-2 rounded-lg text-lg font-Poppins font-bold hover:bg-opacity-90 transition-all duration-300 border-black border-[2px]"
               >
-                <FaGlobe size={20} />
+                {gram}
               </a>
             )}
           </div>
@@ -80,8 +102,11 @@ const Mentori = () => {
           <FlipCard
             key={card.id}
             image={card.image}
+            name={card.name}
+            role={card.role}
             text={card.text}
-            link={card.link}
+            insta={card.insta}
+            gram={card.gram}
           />
         ))}
       </div>

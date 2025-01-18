@@ -9,6 +9,7 @@ import {
   HTech,
   ZileleRoboticii,
   MareaUnireRoboticii,
+  HideMeet,
 } from "../components";
 
 import React from "react";
@@ -30,6 +31,8 @@ const Events = () => {
         <ZileleRoboticii />
         <Bara />
         <MareaUnireRoboticii />
+        <Bara />
+        <HideMeet />
         <Bara />
       </div>
       <Footer />

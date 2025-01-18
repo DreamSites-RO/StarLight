@@ -1,5 +1,7 @@
-import HomePage from "../assets/HomePage.jpg";
+import PozaEchipa from "../assets/PozaEchipa.jpg";
+
 import React from "react";
+
 import { motion } from "framer-motion";
 
 const Introducere = () => {
@@ -48,7 +50,11 @@ const Introducere = () => {
           variants={item}
           className="flex flex-1 border-clr-princ p-[4px] rounded-[1.25rem] border-2"
         >
-          <img src={HomePage} alt="HomePage" className="rounded-[1.25rem]" />
+          <img
+            src={PozaEchipa}
+            alt="PozaEchipa"
+            className="rounded-[1.25rem]"
+          />
         </motion.div>
 
         <motion.div variants={item} className="flex flex-1 flex-col">

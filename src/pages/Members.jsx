@@ -16,8 +16,8 @@ const Members = () => {
       <Mentori />
       <Bara />
       <Membri />
-      <Bara />
-      <Voluntari />
+      {/* <Bara /> */}
+      {/* <Voluntari /> */}
       <Footer />
     </div>
   );
