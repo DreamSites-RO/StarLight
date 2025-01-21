@@ -6,13 +6,43 @@ import Adi from "../assets/Adi.png";
 import Veve from "../assets/Veve.png";
 import Voro from "../assets/Voro.png";
 
+// const MentoriCards = [
+//   {
+//     id: 1,
+//     image: Adi,
+//     name: "Diaconu Adrian",
+//     role: "-> Mentor",
+//     text: "Ca mentor, încerc să ofer o viziune de ansamblu asupra lucrurilor printr-o îndrumare tehnică riguroasă, folosind principii de bază ale fizicii și matematicii.",
+//     insta: "",
+//     gram: "",
+//   },
+//   {
+//     id: 2,
+//     image: Veve,
+//     name: "Diaconu Veronica",
+//     role: "-> Mentor",
+//     text: "Sunt unul dinte mentorii echipei StarLight Robotics, preocupat de învățare continuă, de cultivarea abilităților de a relaționa și de a oferi încredere tinerilor să își atingă performanțele.",
+//     insta: "https://www.instagram.com/diaconu_veronica13/",
+//     gram: "@diaconu_veronica13",
+//   },
+//   {
+//     id: 3,
+//     image: Voro,
+//     name: "Daniel Vorovenci",
+//     role: "-> Mentor & Vizitator",
+//     text: "Salutare! Mă numesc Daniel Vorovenci, reprezint Colegiul Național ”Alexandru Odobescu” din Pitești în calitate de director și am devenit mentor oficial al acestei echipei în 2024.",
+//     insta: "",
+//     gram: "",
+//   },
+// ];
+
 const MentoriCards = [
   {
     id: 1,
     image: Adi,
     name: "Diaconu Adrian",
     role: "-> Mentor",
-    text: "Ca mentor, încerc să ofer o viziune de ansamblu asupra lucrurilor printr-o îndrumare tehnică riguroasă, folosind principii de bază ale fizicii și matematicii.",
+    text: "As a mentor, I try to provide an overall vision of things through rigorous technical guidance, using basic principles of physics and mathematics.",
     insta: "",
     gram: "",
   },
@@ -21,7 +51,7 @@ const MentoriCards = [
     image: Veve,
     name: "Diaconu Veronica",
     role: "-> Mentor",
-    text: "Sunt unul dinte mentorii echipei StarLight Robotics, preocupat de învățare continuă, de cultivarea abilităților de a relaționa și de a oferi încredere tinerilor să își atingă performanțele.",
+    text: "I am one of the mentors of the StarLight Robotics team, focused on continuous learning, cultivating relationship skills, and instilling confidence in young people to achieve their goals.",
     insta: "https://www.instagram.com/diaconu_veronica13/",
     gram: "@diaconu_veronica13",
   },
@@ -29,8 +59,8 @@ const MentoriCards = [
     id: 3,
     image: Voro,
     name: "Daniel Vorovenci",
-    role: "-> Mentor & Vizitator",
-    text: "Salutare! Mă numesc Daniel Vorovenci, reprezint Colegiul Național ”Alexandru Odobescu” din Pitești în calitate de director și am devenit mentor oficial al acestei echipei în 2024.",
+    role: "-> Mentor & Visitor",
+    text: "Hello! My name is Daniel Vorovenci, I represent the 'Alexandru Odobescu' National College in Pitești as its principal, and I officially became a mentor of this team in 2024.",
     insta: "",
     gram: "",
   },
